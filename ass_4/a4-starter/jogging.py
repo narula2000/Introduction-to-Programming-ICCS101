@@ -12,8 +12,19 @@ def jogging_average(activities):
     >>> round(jogging_average(log_book), 4)
     2.4587
     """
+    n_sec=0
+    n_dis=0
     for x in activities:
         if "jogging;" in x:
+            sec=int(x[13:15])*60+int(x[16:18])
+            dis=float(x[28:])*1000
+            n_sec=n_sec+sec
+            n_dis=n_dis+dis
+    return n_dis/n_sec
+            
+        
+    
+
             
         
 
