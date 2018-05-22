@@ -12,15 +12,15 @@ def enc(msg, key):
     x=0
     b=""
     for y in range(1,len(msg)):
-        while len(b)<len(msg)*y:
+        while len(b)<((len(msg)//key)+1)*y:
             b=b+msg[x]
             x=x+key
             if x>=len(msg):
-                x=y-1
+                x=0
             if x==0:
                 x=x+y
-        if len(b)==len(msg):
-            return b
+            if len(b)==len(msg):
+                return b
     
 
 
