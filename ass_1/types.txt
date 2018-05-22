@@ -1,0 +1,19 @@
+#Assigment 01, Task 03
+#Name: Vikrom Narula
+#Time spent: 10:00 min
+
+width = 14
+height = 11.0
+
+1. width/3 = 4.66... float 
+2. width/2.0 = 7.0 float
+3. height/3 = 3.0 float
+4. height//3.0 = 3.0 float 
+5. height*width/2 = 77.0 float 
+6. width/2*height = 77.0 float
+7. 3+4*5 = 23 integer 
+8. 3//4+4*5 = 20 integer
+9. 3/4+4*5 = 20.75 float 
+10. 3/4.0+4*5 = 20.75 float
+
+

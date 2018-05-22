@@ -1,0 +1,8 @@
+#Assigment 03, Task 04
+#Name: Vikrom Narula
+#Time spent: 01:00 min
+1. abacdb: a(),b(),c(),d()
+2. aacbba: a(),c(),b(),b(),a()
+3. dbacba: d(),c(),b(),a()
+4. acedbb: e(),b()
+5. bdbbca: impossible

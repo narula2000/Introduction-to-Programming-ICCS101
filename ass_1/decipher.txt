@@ -1,0 +1,13 @@
+#Assigment 01, Task 03
+#Name: Vikrom Narula
+#Time spent: 20:00 min
+
+Program I 
+x = False 
+y = False
+ x or not y = True
+ 
+ 
+Program II
+x=790
+ x >= 40 and (x%20)//10 == 1
