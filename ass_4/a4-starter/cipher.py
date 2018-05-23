@@ -1,3 +1,10 @@
+class str2(str):
+    def __repr__(self):
+        return ''.join(('"', super().__repr__()[1:-1], '"'))
+
+
+
+
 def enc(msg, key):
     """
 
@@ -20,7 +27,7 @@ def enc(msg, key):
             if x==0:
                 x=x+y
             if len(b)==len(msg):
-                return b
+                return str2(b)
     
 
 
