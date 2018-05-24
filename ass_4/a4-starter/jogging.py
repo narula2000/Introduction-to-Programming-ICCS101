@@ -14,14 +14,25 @@ def jogging_average(activities):
     """
     n_sec=0
     n_dis=0
+#    for x in activities:
+#        if "jogging;" in x:
+#            sec=int(x[13:15])*60+int(x[16:18])
+#            dis=float(x[28:])*1000
+#            n_sec=n_sec+sec
+#            n_dis=n_dis+dis
+#    return n_dis/n_sec
     for x in activities:
-        if "jogging;" in x:
-            sec=int(x[13:15])*60+int(x[16:18])
-            dis=float(x[28:])*1000
-            n_sec=n_sec+sec
+        a,b,c=x.split(";")
+        if a== "jogging":
+            g,h=b.split(":") #time
+            j,k=h.split(",")
+            sec=(int(j)*60)+int(k)
+            u,i=c.split(":")
+            dis=float(i)*1000
             n_dis=n_dis+dis
-    return n_dis/n_sec
-            
+            n_sec=n_sec+sec
+    speed=n_dis/n_sec
+    return speed
         
     
 
