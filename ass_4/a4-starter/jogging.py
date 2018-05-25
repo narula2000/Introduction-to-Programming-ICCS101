@@ -1,3 +1,7 @@
+#Assigment 04, Task 06
+#Name: Vikrom Narula
+#Time spent: 1:30 hour
+
 log_book = [
     "cycling;time:1,49;distance:2",
     "jogging;time:40,11;distance:6",

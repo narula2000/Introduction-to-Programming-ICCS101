@@ -1,3 +1,7 @@
+#Assigment 04, Task 04
+#Name: Vikrom Narula
+#Time spent: 48:00 hour
+
 def is_hidden(s, t):
     """
     >>> is_hidden("welcometothehotelcalifornia","melon")

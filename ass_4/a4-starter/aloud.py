@@ -1,3 +1,7 @@
+#Assigment 04, Task 03
+#Name: Vikrom Narula
+#Time spent: 1:00 hour
+
 def readAloud(lst):
     """
 

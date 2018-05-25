@@ -1,3 +1,8 @@
+#Assigment 04, Task 02
+#Name: Vikrom Narula
+#Time spent: 1:00 hour
+
+
 def altSum(lst):
     """
 

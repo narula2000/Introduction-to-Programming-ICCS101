@@ -1,3 +1,6 @@
+#Assigment 04, Task 01
+#Name: Vikrom Narula
+#Time spent: 30:00 min
 def rev_str(s):
     """Returns the reverse of the input string s, without using the built-in
     reverse mechanism.

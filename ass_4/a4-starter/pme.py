@@ -1,3 +1,7 @@
+#Assigment 04, Task 07
+#Name: Vikrom Narula
+#Time spent: 5:00 min
+
 def checkprime(n):
     if n<2: return False
     else:
