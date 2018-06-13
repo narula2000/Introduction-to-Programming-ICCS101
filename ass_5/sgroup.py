@@ -1,42 +1,65 @@
-def findmaxdif(data):
-    lst_m=[]
-    dif_m=0
-    for num in range(len(data)-1):
-        dif=data[num+1]-data[num]
-        if dif_m<dif:
-            dif_m=dif
-            lst_m.append(data[num],data[num+1],dif_m)
-    return lst_m
-def largegrp(data):
-    lst=[]
-    sl=findmaxdif(data)
-    lst.append(data[sl[1]:])
-    return lst
-def smallgrp(data):
-    lst=[]
-    sl=findmaxdif(data)
-    lst.append(data[:sl[0]])
-    return lst
+def findmax(data):
+    lst=[0]
+    b=0
+    
+    for x in range(len(data)-1):
+        a=data[x+1]-data[x]
+        if a>b:
+            b=a
+            lst[0]=x
+    return lst[0]
+def maxxy(data):
+    lst=[0]
+    b=0
+    
+    for x in range(len(data)-1):
+        a=data[x+1]-data[x]
+        if a>b:
+            b=a
+            lst[0]=b
+    return lst[0]
+def checklstm(data):
+    d=[]
+    for y in data:
+        if y not in d:
+            d.append(y)
+            d.append(findmax(y))
+            d.append(maxxy(y))
+    return d
 def separate(data, k):
-    m_data=data[:]
-    f_lst=[]
-    lst_s1=smallgrp(data)
-    lst_l1=largegrp(data)
-    lst_l=lst_l1
-    lst_s=lst_s1
-    if k==2:
-        f_lst.append(lst_s,lst_l)
-    while len(f_lst)!=k:
-        if findmaxdif(lst_s)[-1]> findmaxdif(lst_l)[-1]:
-            f_lst.insert(0,smallgrp(lst_s))
-            lst_s=smallgrp(lst_s)
-            f_lst.insert(-1,largegrp(lst_s))
-            lst_l=largegrp(lst_s)
-        elif findmaxdif(lst_s)[-1]< findmaxdif(lst_l)[-1]:
-            f_lst.insert(0,smallgrp(lst_l))
-            lst_s=smallgrp(lst_l)
-            f_lst.insert(-1,largegrp(lst_l))
-            lst_l=largegrp(lst_l)
-        else:
-            f_lst.insert(0,smallgrp(lst_s))
-            f_lst.insert()
+    l=[]
+    g=data[:]
+    el=[]
+    el.append(g)
+    vl=[3]
+    b=0
+    while k!=len(l):
+        for ma in el:
+            if maxxy(ma)>b:
+                b=maxxy(ma)
+                vl[0]=ma
+                
+        b=0
+        ll=el
+        for ch in ll:
+            if ch==vl[0]:
+                el.remove(vl[0])
+                inx=findmax(vl[0])+1
+                el.append(vl[0][:inx])
+                el.append(vl[0][inx:])
+
+        if len(el)==k:
+            for u in el:
+                l.append(u)
+    return sorted(l)
+
+
+
+
+
+
+
+
+print(separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 8))
+
+
