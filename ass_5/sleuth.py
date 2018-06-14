@@ -12,8 +12,9 @@ def containsWord(grid, w):
     gap=len(grid[0])
     cou=0
     for word in w:
-        if word in lsring:
-            l.append(word)
+        for longie in grid:
+            if word in stringmak(longie):
+                l.append(word)
         if word[0] in lsring:  #check vertical
             for b in range(len(lsring)):
                 if word[0]==lsring[b]:
@@ -27,7 +28,7 @@ def containsWord(grid, w):
                     if cou==len(word):
                         l.append(word)
                         cou=0
-        if word[0] in lsring:  
+        if word[0] in lsring:  #check righ down
                 for b in range(len(lsring)):
                     if word[0]==lsring[b]:
                         e=b
@@ -40,20 +41,21 @@ def containsWord(grid, w):
                         if cou==len(word):
                             l.append(word)
                             cou=0
-        if word[0] in lsring:  
+                            
+        if word[0] in lsring:  #check left up
                 for b in range(len(lsring)):
                     if word[0]==lsring[b]:
                         e=b
                         for letter in range(len(word)):
                             
-                            if len(lsring)>e+(gap*letter)+letter and word[letter]==lsring[e+(gap*letter)-letter] :
+                            if len(lsring)>e+(gap*letter)+letter and word[letter]==lsring[e-(gap*letter)+letter] :
                                 cou+=1
                             else:
                                 cou=0
                         if cou==len(word):
                             l.append(word)
                             cou=0
-    return l&l
+    return list(set(l))
 
 
 print(containsWord([["r","a","w","b","i","t"],
