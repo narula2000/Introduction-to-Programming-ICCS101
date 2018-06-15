@@ -1,3 +1,8 @@
+#Assignment 05, Task 01 
+#Name: Vikrom Narula
+
+#Time Spent: 1 hrs
+
 def charHistogram(filename):
     text= open(filename, 'r')
     line= text.readlines()
@@ -22,6 +27,6 @@ def charHistogram(filename):
             if alp[al]==let:
                 print(let, (table[let]*'+'))
     text.close()
-print(charHistogram("C:\\Users\\asus\\Dropbox\\MUIC\\Intro Pro\\ass_5\\test5.txt"))
+
 
 

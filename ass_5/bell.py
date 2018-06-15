@@ -1,3 +1,8 @@
+#Assignment 05, Task 02 
+#Name: Vikrom Narula
+
+#Time Spent: 1 hrs
+
 def loveTri(n):
     lst=[]
     e_lst=[]
@@ -15,7 +20,7 @@ def loveTri(n):
             
             l_lst.append(e_lst)
     return l_lst
-print(loveTri(5))
+
 
 
 

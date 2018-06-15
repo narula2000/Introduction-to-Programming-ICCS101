@@ -1,3 +1,9 @@
+#Assignment 05, Task 03 
+#Name: Vikrom Narula
+
+#Time Spent: 13 hrs
+
+
 def stringmak(grid):
     h=''
     for li in grid:
@@ -6,7 +12,7 @@ def stringmak(grid):
     return h
 
 
-def containsWord(grid, w):
+def wordSleuth(w, grid):
     lsring=stringmak(grid)
     l=[]
     gap=len(grid[0])
@@ -58,12 +64,6 @@ def containsWord(grid, w):
     return list(set(l))
 
 
-print(containsWord([["r","a","w","b","i","t"],
-["x","a","y","z","c","h"],
-["p","q","b","e","i","e"],
-["t","r","s","b","o","g"],
-["u","w","x","v","i","t"],
-["n","m","r","w","o","t"]],["bog", "moon", "rabbit", "the", "bit",
-"raw"]))
+
 
 

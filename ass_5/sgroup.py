@@ -1,3 +1,9 @@
+#Assignment 05, Task 05 
+#Name: Vikrom Narula
+
+#Time Spent: 24 hrs
+
+
 def findmax(data):
     lst=[0]
     b=0
@@ -53,6 +59,7 @@ def separate(data, k):
                 l.append(u)
     return sorted(l)
 
+print(separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 5))
 
 
 
@@ -60,6 +67,5 @@ def separate(data, k):
 
 
 
-print(separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 8))
 
 

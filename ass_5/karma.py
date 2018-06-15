@@ -1,3 +1,9 @@
+#Assignment 05, Task 04
+#Name: Vikrom Narula
+
+#Time Spent: 0.5 hrs
+
+
 def keepTabs(actions):
     table=dict()
     r_table=dict()
@@ -28,8 +34,7 @@ def keepTabs(actions):
         
     return r_table
 
-print(keepTabs(["Jim++", "John--", "Jeff++", "Jim++", "John--", "John->Jeff", "Jeff--",
-"June++", "Home->House"]))
+
 
 
 
