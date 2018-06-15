@@ -59,7 +59,7 @@ def separate(data, k):
                 l.append(u)
     return sorted(l)
 
-print(separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 5))
+
 
 
 

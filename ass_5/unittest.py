@@ -26,24 +26,4 @@ assert(karma.keepTabs(["Jim++", "John--", "Jeff++", "Jim++", "John--", "John->Je
 assert(sgroup.separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 7)==[[1], [1.2], [4.5], [4.7], [9.1], [9.8], [9.9]])
 assert(sgroup.separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 6)==[[1], [1.2], [4.5], [4.7], [9.1], [9.8, 9.9]])
 assert(sgroup.separate([1, 1.2, 4.5, 4.7, 9.1, 9.8, 9.9], 5)==[[1, 1.2], [4.5], [4.7], [9.1], [9.8, 9.9]])
-assert(sleuth.wordSleuth((["bog", "moon", "rabbit", "the", "bit",
-"raw"],[["r","a","w","b","i","t"],
-["x","a","y","z","c","h"],
-["p","q","b","e","i","e"],
-["t","r","s","b","o","g"],
-["u","w","x","v","i","t"],
-["n","m","r","w","o","t"]])==['bog', 'raw', 'bit', 'rabbit', 'the']))
-assert(sleuth.wordSleuth(["moon", "rabbit", "the", "bit",
-"raw"],[["r","a","w","b","i","t"],
-["x","a","y","z","c","h"],
-["p","q","b","e","i","e"],
-["t","r","s","b","o","g"],
-["u","w","x","v","i","t"],
-["n","m","r","w","o","t"]])==['bit', 'the', 'raw', 'rabbit'])
-assert(sleuth.wordSleuth(["moon","the", "bit",
-"raw"],[["r","a","w","b","i","t"],
-["x","a","y","z","c","h"],
-["p","q","b","e","i","e"],
-["t","r","s","b","o","g"],
-["u","w","x","v","i","t"],
-["n","m","r","w","o","t"]])==['bit', 'the', 'raw'])
+
