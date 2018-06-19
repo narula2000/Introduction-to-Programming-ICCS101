@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
+    "python.pythonPath": "C:\\Users\\asus\\Anaconda3\\python.exe",
     "editor.fontLigatures": true,
     "python.unitTest.unittestArgs": [
         "-v",
@@ -12,5 +12,5 @@
     "python.unitTest.nosetestsEnabled": false,
     "python.unitTest.unittestEnabled": false,
     "python.unitTest.promptToConfigure": false,
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": false
 }

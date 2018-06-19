@@ -5,8 +5,7 @@
 
 
 
+
+
 def findMe(elt, lst):
-    if elt not in lst:
-        return None
-    if elt in lst:
-        
+    
