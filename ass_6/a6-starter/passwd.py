@@ -6,21 +6,22 @@ def passwordOK(p_str):
     lal='abcdefghijklmnopqrstuvwxzy'
     ual=lal.upper()
     num='0123456789'
-    count=0
+    count=[]
     for let in range(len(p_str)-1):
         if p_str[let]==p_str[let+1]:
             return False
     if 6<=len(p_str)<=12:
         for l in p_str:
             if l in lal:
-                count+=1
+                count.append(1)
             if l in ual:
-                count+=1
+                count.append(2)
             if l in num:
-                count+=1
+                count.append(3)
             if l in '$#@':
-                count+=1
-        if count>=4:
+                count.append(4)
+        tt=list(set(count))
+        if len(tt)==4:
             return True
         else:
             return False
@@ -30,4 +31,5 @@ def passwordOK(p_str):
 assert(passwordOK('ABd1234@1')==True)
 assert(passwordOK('f#9')==False)
 assert(passwordOK('Abbc1$f')==False)
-assert(passwordOK('Abcb1$f')==True)
+assert(passwordOK('bcb1$f%')==False)
+
