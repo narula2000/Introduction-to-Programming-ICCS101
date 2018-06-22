@@ -6,3 +6,7 @@
 3. dbacba: d(),c(),b(),a()
 4. acedbb: e(),b()
 5. bdbbca: impossible
+
+
+"python.pythonPath": "C:\\Users\\asus\\Anaconda3\\python.exe"
+"python.pythonPath": "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe"
