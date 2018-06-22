@@ -32,4 +32,4 @@ assert(passwordOK('ABd1234@1')==True)
 assert(passwordOK('f#9')==False)
 assert(passwordOK('Abbc1$f')==False)
 assert(passwordOK('bcb1$f%')==False)
-
+assert(passwordOK('Abcb1$f%')==True)
