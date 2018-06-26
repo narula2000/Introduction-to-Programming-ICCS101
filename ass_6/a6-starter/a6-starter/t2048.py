@@ -39,16 +39,17 @@ def doKeyUp(board):
                 if checker[r][c]==' ':
                     checker[r][c]=checker[r+1][c]
                     checker[r+1][c]=' '
-    for r in range(len(checker)-1): # Add same num
+    for r in range(len(checker)-1,0,-1): # Add same num
         for c in range(len(checker[0])):
-            if checker[r][c]==checker[r+1][c] and checker[r][c]!=' ':
+            if checker[r][c]==checker[r-1][c] and checker[r][c]!=' ':
                 checker[r][c]=str(int(checker[r][c])*2)
-                checker[r+1][c]=' '        
-    for r in range(len(checker)-1):  #Shift up once
-        for c in range(len(checker[0])): 
-            if checker[r][c]==' ':
-                checker[r][c]=checker[r+1][c]
-                checker[r+1][c]=' '
+                checker[r-1][c]=' '        
+    for times in range(len(checker)):
+        for r in range(len(checker)-1):  #Shift up once
+            for c in range(len(checker[0])): 
+                if checker[r][c]==' ':
+                    checker[r][c]=checker[r+1][c]
+                    checker[r+1][c]=' '
     return ((board!=checker),checker)
 
 # Returns a tuple (changed, new_board) 
@@ -67,16 +68,17 @@ def doKeyDown(board):
                 if checker[r][c]==' ':
                     checker[r][c]=checker[r-1][c]
                     checker[r-1][c]=' '
-    for r in range(len(checker)-1,0,-1): # Add same num
+    for r in range(len(checker)-1): # Add same num
         for c in range(len(checker[0])):
-            if checker[r][c]==checker[r-1][c] and checker[r][c]!=' ':
+            if checker[r][c]==checker[r+1][c] and checker[r][c]!=' ':
                 checker[r][c]=str(int(checker[r][c])*2)
-                checker[r-1][c]=' '        
-    for r in range(len(checker)-1,0,-1):  #Shift up once
-        for c in range(len(checker[0])): 
-            if checker[r][c]==' ':
-                checker[r][c]=checker[r-1][c]
-                checker[r-1][c]=' '
+                checker[r+1][c]=' '        
+    for times in range(len(checker)): #shif all up
+        for r in range(len(checker)-1,0,-1):
+            for c in range(len(checker[0])):
+                if checker[r][c]==' ':
+                    checker[r][c]=checker[r-1][c]
+                    checker[r-1][c]=' '
     return ((board!=checker),checker)
 
 # Returns a tuple (changed, new_board) 
@@ -100,11 +102,12 @@ def doKeyLeft(board):
             if checker[r][c]==checker[r][c+1] and checker[r][c]!=' ':
                 checker[r][c]=str(int(checker[r][c])*2)
                 checker[r][c+1]=' '        
-    for r in range(len(checker)):  #Shift up once
-        for c in range(len(checker[0])-1): 
-            if checker[r][c]==' ':
-                checker[r][c]=checker[r][c+1]
-                checker[r][c+1]=' '
+    for times in range(len(checker[0])): #shif all up
+        for r in range(len(checker)):
+            for c in range(len(checker[0])-1):
+                if checker[r][c]==' ':
+                    checker[r][c]=checker[r][c+1]
+                    checker[r][c+1]=' '
     return ((board!=checker),checker)
 
 
@@ -129,11 +132,12 @@ def doKeyRight(board):
             if checker[r][c]==checker[r][c-1] and checker[r][c]!=' ':
                 checker[r][c]=str(int(checker[r][c])*2)
                 checker[r][c-1]=' '        
-    for r in range(len(checker)):  #Shift up once
-        for c in range(len(checker[0])-1,0,-1): 
-            if checker[r][c]==' ':
-                checker[r][c]=checker[r][c-1]
-                checker[r][c-1]=' '
+    for times in range(len(checker[0])): #shif all up
+        for r in range(len(checker)):
+            for c in range(len(checker[0])-1,0,-1):
+                if checker[r][c]==' ':
+                    checker[r][c]=checker[r][c-1]
+                    checker[r][c-1]=' '
     return ((board!=checker),checker)
 
 
