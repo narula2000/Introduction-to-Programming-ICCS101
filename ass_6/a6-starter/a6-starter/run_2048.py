@@ -5,7 +5,7 @@
 from tkinter import Tk, Canvas
 import random
 from tkinter import messagebox as tkMessageBox
-import sol_t2048 as t2048
+import t2048 as t2048
 
 class Tile(Canvas):
     """ UI for each tile """
