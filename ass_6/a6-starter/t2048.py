@@ -163,5 +163,6 @@ def hist(board):
                 if board[r][c] not in di:
                     di[board[r][c]]=1
                 else:
-                    di[board[r][c]]=board[r][c]+1
+                    di[board[r][c]]+=1
     return di
+

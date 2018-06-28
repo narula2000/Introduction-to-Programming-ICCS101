@@ -1,6 +1,6 @@
 import random
 import pprint
-pp= pprint.PrettyPrinter(indent=3)
+pp= pprint.PrettyPrinter(indent=0)
 def ranboard(n):
     con=[' ','2','4','8','16','32']
     board=[]
