@@ -20,5 +20,6 @@ def findMe(elt, lst):
 assert(findMe(9, [1,2,9,5,3,9])==2)
 assert(findMe(7, [1,2,3,4,9])==None)
 assert(findMe('nag',[1,2,3,'nag',4])==3)
+assert(findMe(5, [5,5,5,55,5,5])==0)
+assert(findMe('ng', ['ng','gn','ng'])==0)
 
-print('Pass')

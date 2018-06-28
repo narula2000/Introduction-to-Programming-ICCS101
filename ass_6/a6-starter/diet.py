@@ -23,11 +23,10 @@ def mealCal(meal, recipes, db):
     return cal
 
 
+meal = ["T-Bone", "T-Bone", "Green Salad1"]
 recipes = ["Pork Stew:Cabbage*5,Carrot*1,Fatty Pork*10",
 "Green Salad1:Cabbage*10,Carrot*2,Pineapple*5",
 "T-Bone:Carrot*2,Steak Meat*1"]
-meal = ["T-Bone", "T-Bone", "Green Salad1"]
 db = ["Cabbage:4,2,0", "Carrot:9,1,5", "Fatty Pork:431,1,5",
 "Pineapple:7,1,0", "Steak Meat:5,20,10", "Rabbit Meat:7,2,20"]
-print(mealCal(meal, recipes, db))
-
+print(mealCal(meal, recipes, db))                
