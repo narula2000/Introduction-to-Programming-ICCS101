@@ -17,16 +17,17 @@ def is_straight_flush(h): #Five cards in a sequence, all in the same suit.
     if len(suit)==1:
         for c,k in enumerate(rank):
             for j in lst_rank:
-                if sorted(lst_rank)==['10','A','J','K','Q']:
-                    return True
-                else:
-                    for v in rank[c:c+5]:
-                        for l in lst_rank:
-                            if v==l:
-                                count+=1
-                    if count==5:
+                if j==k:
+                    if sorted(lst_rank)==['10','A','J','K','Q']:
                         return True
-                    else: return False
+                    else:
+                        for v in rank[c:c+5]:
+                            for l in lst_rank:
+                                if v==l:
+                                    count+=1
+                        if count==5:
+                            return True
+                        else: return False
     else: return False
 
 def is_four_a_kind(h): #All four cards of the same rank.
@@ -107,9 +108,3 @@ def all_full_house():
 
 def all_two_pair():
     return set([i for i in all_hand() if is_two_pair(i)])
-
-print(len(all_hand()))
-print(len(all_straight_flush()))
-print(len(all_four_of_a_kind()))
-print(len(all_full_house()))
-print(len(all_two_pair()))
