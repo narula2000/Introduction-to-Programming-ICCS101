@@ -31,8 +31,3 @@ def all_perm(n):
                     h=[]
                 
         return set(tuple(mn) for mn in lst)
-
-
-
-
-
