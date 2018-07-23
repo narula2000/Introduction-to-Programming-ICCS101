@@ -1,23 +1,26 @@
-#Assigment 04, Task 07
-#Name: Vikrom Narula
-#Time spent: 5:00 min
+# Assigment 04, Task 07
+# Name: Vikrom Narula
+# Time spent: 5:00 min
+
 
 def checkprime(n):
-    if n<2: return False
+    if n < 2:
+        return False
     else:
-     divisible = False
-     for d in range(2, n):
-        if n % d == 0:
-           divisible = True
-           break
-     # prime if none of these divide x
-     return not divisible
+        divisible = False
+        for d in range(2, n):
+            if n % d == 0:
+                divisible = True
+                break
+        # prime if none of these divide x
+        return not divisible
+
 
 def plus_unit(a):
-    acc=0
-    s=str(a)
-    for b in range(1,len(s)+1):
-        acc=acc+int(s[-b])
+    acc = 0
+    s = str(a)
+    for b in range(1, len(s)+1):
+        acc = acc+int(s[-b])
     return acc
 
 
@@ -40,22 +43,22 @@ def primeMeatExtract(x):
     True
 
     """
-    if x<=1:
+    if x <= 1:
         return True
-    if x<=9 and x>1:
-        if checkprime(x)== True:
+    if x <= 9 and x > 1:
+        if checkprime(x) == True:
             return x
         else:
             return True
 
-    while checkprime(x)!=True and x>9:
-        x=plus_unit(x)
-    if x<=9 and x>1:
-        if checkprime(x)== True:
+    while checkprime(x) != True and x > 9:
+        x = plus_unit(x)
+    if x <= 9 and x > 1:
+        if checkprime(x) == True:
             return x
         else:
             return True
-    if checkprime(x)== True:
+    if checkprime(x) == True:
         return x
 
 
