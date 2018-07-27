@@ -2,6 +2,8 @@
 # Name: Vikrom Narula
 # Collaborators: None
 # TimeSpent: 70:00min
+
+
 def is_all_odd(lst):
     """
 
@@ -12,27 +14,17 @@ def is_all_odd(lst):
     >>> is_all_odd([])
     True
     """
-    lst1=[]
-    if lst==[]:
+    lst1 = []
+    if lst == []:
         return True
     for x in lst:
-        if x%2!=0:
+        if x % 2 != 0:
             lst1.append(x)
-    if len(lst1)==len(lst):
+    if len(lst1) == len(lst):
         return True
     else:
         return False
-    
-     
-        
-        
-    
-            
-            
-            
-            
-        
-    
+
 
 
 ###########################################################################
