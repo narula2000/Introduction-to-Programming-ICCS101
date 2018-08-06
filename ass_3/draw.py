@@ -2,6 +2,8 @@
 # Name: Vikrom Narula
 # Collaborators: None
 # TimeSpent: 80:00min
+
+
 def triangle(k):
     """
 
@@ -16,7 +18,7 @@ def triangle(k):
 #    def star():
 #        for a in range(1,k):
 #            print("*"*a)
-#            
+#
 #    def pound():
 #        for b in range(k-1,-1,-1):
 #            print("#"*b)
@@ -26,9 +28,10 @@ def triangle(k):
 #    for b in range(k-1,-1,-1):
 #        y=("#"*b)
 #    print(y+x+y)
-    for x in range(1,k+1):
+    for x in range(1, k+1):
         print("#"*(k-x)+"*"*(2*x-1)+"#"*(k-x))
-             
+
+
 def diamond(k):
     """
 
@@ -48,9 +51,9 @@ def diamond(k):
     ####*####
 
     """
-    for x in range(1,k+1):
+    for x in range(1, k+1):
         print("#"*(k+1-x)+"*"*(2*x-1)+"#"*(k+1-x))
-    for x in range(k,0,-1):
+    for x in range(k, 0, -1):
         print("#"*(k+1-x)+"*"*(2*x-1)+"#"*(k+1-x))
 
 
@@ -64,4 +67,3 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
 ###########################################################################
-
