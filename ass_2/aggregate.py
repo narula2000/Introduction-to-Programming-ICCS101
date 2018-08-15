@@ -2,19 +2,21 @@
 # Name: Vikrom Narula
 # Collaborators: None
 # TimeSpent: 3:50min
+
+
 def my_min(p, q, r):
     """Return the minimum of p,q, and r, without using min
 
     >>> my_min(3.0,1,9)
     1
     """
-    if p<q and p<r:
+    if p < q and p < r:
         return p
-    if q<p and q<r:
+    if q < p and q < r:
         return q
     else:
         return r
-     
+
 
 def my_mean(p, q, r):
     """Return the mean of p,q, and r
@@ -23,7 +25,7 @@ def my_mean(p, q, r):
     4.66667
     """
     return (p+q+r)/3
-    
+
 
 def my_med(p, q, r):
     """Return the median of p,q, and r
@@ -33,15 +35,14 @@ def my_med(p, q, r):
     """
 
     # delete this comment line and add your code
-    if (p>q and p<r) or (p<q and p>r) :
+    if (p > q and p < r) or (p < q and p > r):
         return p
-    if (q>p and q<r) or (q<p and q>r):
+    if (q > p and q < r) or (q < p and q > r):
         return q
     else:
         return r
-    
-        
-    
+
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
