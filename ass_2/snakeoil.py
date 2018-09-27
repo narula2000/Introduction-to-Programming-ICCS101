@@ -13,7 +13,6 @@ def price(vol):
     """
 
     # delete this comment line and write your code
-     
     if vol< 10 :
         ship = 20*vol
     if vol >9 and vol<101:
