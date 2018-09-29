@@ -11,6 +11,7 @@ def sumdigit(n):
     for x in range(1,len(m)+1):
         k=(int(m[-x])**2)+k
     return k
+
 def happynum(n):
     lst=[]
     for y in range(1,n+1):
@@ -20,7 +21,7 @@ def happynum(n):
             if x==1:
                 lst.append(y)
                 return lst
-            if x==4:
+            if x==4:   
                 return lst
         
 def sumHP(n):

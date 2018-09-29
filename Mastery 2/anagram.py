@@ -43,4 +43,3 @@ def isAnagram(word1, word2, intab, outtab):
                 return True
     else:
         return False
-             
