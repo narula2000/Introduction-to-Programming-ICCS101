@@ -17,7 +17,7 @@ def readAloud(lst):
     """
     cun = 1
     n_lst = []
-    if lst == []:
+    if not lst:
         return []
     for x in range(0, len(lst)):
         if len(lst) != x + 1:
@@ -32,6 +32,8 @@ def readAloud(lst):
             n_lst.append(cun)
             n_lst.append(lst[x])
             return n_lst
+
+
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
 # your code. Run me (e.g., using the run button in Spyder).
