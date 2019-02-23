@@ -1,6 +1,6 @@
-#Assigment 04, Task 04
-#Name: Vikrom Narula
-#Time spent: 48:00 hour
+# Assigment 04, Task 04
+# Name: Vikrom Narula
+# Time spent: 48:00 hour
 
 def is_hidden(s, t):
     """
@@ -19,18 +19,16 @@ def is_hidden(s, t):
     >>> is_hidden("VhHTdipc07","hTc")
     True
     """
-    
-    y=0
-    for x in range(0,len(s)-1):
-        if t[y]==s[x] and y<len(t)-1:
-            y=y+1
-    if y==len(t)-1:
+
+    y = 0
+    for x in range(0, len(s) - 1):
+        if t[y] == s[x] and y < len(t) - 1:
+            y = y + 1
+    if y == len(t) - 1:
         return True
     else:
         return False
-    
-            
-        
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
@@ -40,5 +38,6 @@ def is_hidden(s, t):
 ###########################################################################
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)
 ###########################################################################

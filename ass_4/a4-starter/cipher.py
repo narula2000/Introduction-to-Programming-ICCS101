@@ -20,14 +20,13 @@ def enc(msg, key):
     """
     x = 0
     b = ""
-    for y in range(1, len(msg)):
+    for y in range(1, len(msg)):  # Next set of encoder
         while len(b) < ((len(msg) // key) + 1) * y:  # Says how many lines are in one set
             b = b + msg[x]  # Add by x index
             x = x + key  # Increases x by the key
             if x >= len(msg):
                 x = 0
-            if x == 0:
-                x = x + y  # Next iteration
+                x = x + y  # Next iteration of index
             if len(b) == len(msg):
                 return str2(b)  # Spit out "..."
 
