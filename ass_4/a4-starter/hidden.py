@@ -19,7 +19,7 @@ def is_hidden(s, t):
     >>> is_hidden("VhHTdipc07","hTc")
     True
     """
-    
+
     y=0
     for x in range(0,len(s)-1):
         if t[y]==s[x] and y<len(t)-1:
@@ -28,9 +28,7 @@ def is_hidden(s, t):
         return True
     else:
         return False
-    
-            
-        
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

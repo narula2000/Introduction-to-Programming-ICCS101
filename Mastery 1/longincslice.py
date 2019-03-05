@@ -14,11 +14,10 @@ def longin(lst):
         else:
             c_lst.append(counter)
             counter=1
-    return print(max(c_lst))
+    print(max(c_lst))
 
 tempList = randArray(200)
 start = time.time()
 longin(tempList)
+#print(tempList)
 print(time.time() - start)
-
-
