@@ -7,15 +7,17 @@ import random
 from tkinter import messagebox as tkMessageBox
 import t2048 as t2048
 
+
 class Tile(Canvas):
     """ UI for each tile """
+
     def __init__(self, master, width=0, height=0, **kwargs):
         self.width = width
         self.height = height
         Canvas.__init__(self, master, width=self.width, height=self.height)
         self.create_rectangle(0, 0, width, height, width=5)
-        self.textObj = self.create_text(width/2, 
-                                        height/2, 
+        self.textObj = self.create_text(width/2,
+                                        height/2,
                                         font=kwargs['font'],
                                         text=" ")
 
@@ -33,6 +35,7 @@ class Tile(Canvas):
         Canvas.grid(self, *args, **kwargs)
         self.grid_propagate(False)
 
+
 class Game2048:
     def __init__(self, master, num_rows, num_cols):
         self.tiles = {}
@@ -43,19 +46,19 @@ class Game2048:
         h = int(root.winfo_height() / num_rows)
         for i in range(num_rows):
             for j in range(num_cols):
-                self.tiles[(i,j)] = Tile(master,
-                                         width=w,
-                                         height=h,
-                                         padx=40,
-                                         pady=40,
-                                         font=("Helvetica", 32))
-                self.tiles[(i,j)].grid(row=i, column=j)
+                self.tiles[(i, j)] = Tile(master,
+                                          width=w,
+                                          height=h,
+                                          padx=40,
+                                          pady=40,
+                                          font=("Helvetica", 32))
+                self.tiles[(i, j)].grid(row=i, column=j)
         self.reset()
 
     def _setBoard(self, board):
         for i in range(len(board)):
             for j in range(len(board[0])):
-                self.tiles[(i,j)].setText(board[i][j])
+                self.tiles[(i, j)].setText(board[i][j])
         self.master.update()
 
     def _getBoard(self):
@@ -63,24 +66,26 @@ class Game2048:
         for i in range(self.num_rows):
             temp = []
             for j in range(self.num_cols):
-                temp.append(self.tiles[(i,j)].getText())
+                temp.append(self.tiles[(i, j)].getText())
             board.append(temp)
         return board
 
     def _gen_number(self, board):
-        ''' Generates a new number. 
+        ''' Generates a new number.
         If there is still a space on the board, return
-          { 
+            {
             num: the new number,
             row: row number,
             col: col number
-          } 
-        Otherwise, return None 
+            }
+        Otherwise, return None
         '''
-        num = random.randint(0,10)
+        num = random.randint(0, 10)
         # Custom distribution
-        if num < 8: num = 2
-        else: num = 4
+        if num < 8:
+            num = 2
+        else:
+            num = 4
         # find an empty space to spawn
         potential = t2048.emptyPos(board)
         # no more move
@@ -103,9 +108,9 @@ class Game2048:
 
     def keypress(self, event):
         k = event.char.lower()
-        if k in ['w','a','s','d']:
+        if k in ['w', 'a', 's', 'd']:
             board = self._getBoard()
-            if k == 'w': 
+            if k == 'w':
                 changed, board = t2048.doKeyUp(board)
             elif k == 'a':
                 changed, board = t2048.doKeyLeft(board)
@@ -130,6 +135,7 @@ class Game2048:
         self.reset()
 
 #####
+
 
 root = Tk()
 
