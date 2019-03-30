@@ -1,10 +1,9 @@
-#Assigment 04, Task 03
-#Name: Vikrom Narula
-#Time spent: 1:00 hour
+# Assigment 04, Task 03
+# Name: Vikrom Narula
+# Time spent: 1:00 hour
 
 def readAloud(lst):
     """
-
     >>> readAloud([])
     []
     >>> readAloud([1,1,1])
@@ -16,26 +15,24 @@ def readAloud(lst):
     >>> readAloud([3,3,1,1,3,1,1])
     [2, 3, 2, 1, 1, 3, 2, 1]
     """
-    cun=1
-    n_lst=[]
-    if lst==[]:
+    cun = 1
+    n_lst = []
+    if not lst:
         return []
-    for x in range(0,len(lst)):
-        if len(lst)!=x+1:
-            if lst[x]==lst[x+1]:
-                cun=cun+1
-            
-            if lst[x]!=lst[x+1]:
+    for x in range(0, len(lst)):
+        if len(lst) != x + 1:
+            if lst[x] == lst[x + 1]:
+                cun = cun + 1
+
+            if lst[x] != lst[x + 1]:
                 n_lst.append(cun)
                 n_lst.append(lst[x])
-                cun=1
-        if len(lst)==x+1:
-             n_lst.append(cun)
-             n_lst.append(lst[x])
-             return n_lst
-        
-             
-                      
+                cun = 1
+        if len(lst) == x + 1:
+            n_lst.append(cun)
+            n_lst.append(lst[x])
+            return n_lst
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
@@ -45,5 +42,6 @@ def readAloud(lst):
 ###########################################################################
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)
 ###########################################################################

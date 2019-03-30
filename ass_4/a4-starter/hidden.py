@@ -1,6 +1,6 @@
-#Assigment 04, Task 04
-#Name: Vikrom Narula
-#Time spent: 48:00 hour
+# Assigment 04, Task 04
+# Name: Vikrom Narula
+# Time spent: 48:00 hour
 
 def is_hidden(s, t):
     """
@@ -20,11 +20,19 @@ def is_hidden(s, t):
     True
     """
 
+<<<<<<< HEAD
     y=0
     for x in range(0,len(s)-1):
         if t[y]==s[x] and y<len(t)-1:
             y=y+1
     if y==len(t)-1:
+=======
+    y = 0
+    for x in range(0, len(s) - 1):
+        if t[y] == s[x] and y < len(t) - 1:
+            y = y + 1
+    if y == len(t) - 1:
+>>>>>>> 7c6538464c524864144fe8915162027e0ae349d7
         return True
     else:
         return False
@@ -38,5 +46,6 @@ def is_hidden(s, t):
 ###########################################################################
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod(verbose=True)
 ###########################################################################
