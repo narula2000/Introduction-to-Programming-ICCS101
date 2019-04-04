@@ -44,7 +44,7 @@ def is_four_a_kind(h): #All four cards of the same rank.
         return True
     else: return False
 
-def is_full_house(h): #Three of a kind with a pair. 
+def is_full_house(h): #Three of a kind with a pair.
     count=0
     rank=dict()
     for i in h:
@@ -94,7 +94,6 @@ def all_hand():
                     for i4 in range(i3+1,len(deck)):
                         for i5 in range(i4+1,len(deck)):
                             s_hand.append((deck[i1],deck[i2],deck[i3],deck[i4],deck[i5]))
-                            
     return set(s_hand)
 
 def all_straight_flush():
