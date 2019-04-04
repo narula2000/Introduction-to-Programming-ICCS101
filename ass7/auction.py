@@ -9,10 +9,12 @@ class Bid:
         self.bid_id, self.bidder_id, self.auction = bid_id, bidder_id, auction
 
     def __str__(self):
-        return 'bid _id {}bidder_id {} auction {}'.format(self.bid_id, self.bidder_id, self.auction)
+        return 'bid _id {}bidder_id {} auction {}'.format(
+            self.bid_id, self.bidder_id, self.auction)
 
     def __repr__(self):
-        return 'bid _id: {}, bidder_id: {}, auction: {}'.format(self.bid_id, self.bidder_id, self.auction)
+        return 'bid _id: {}, bidder_id: {}, auction: {}'.format(
+            self.bid_id, self.bidder_id, self.auction)
 
     def __lt__(self, other):
         return self.bid_id < other.bid_id
@@ -41,7 +43,7 @@ class Auction:
 
     def price(self):
         price = 1
-        price += len(self.name)*(1.5)
+        price += len(self.name) * (1.5)
         return price
 
     def winner(self):
@@ -84,13 +86,13 @@ def CSV2List(csvFilename):
             finallst.append(int(bidid))
             finallst.append(bidderid)
             finallst.append(auction)
-        for i in range(len(finallst)+1):
+        for i in range(len(finallst) + 1):
             if len(instance) < 3:
                 instance.append(finallst[i])
             else:
                 newbid.append(tuple(instance))
                 instance = []
-                if len(finallst)/3 != len(newbid):
+                if len(finallst) / 3 != len(newbid):
                     instance.append(finallst[i])
         return [Bid(i[0], i[1], i[2]) for i in newbid]
 

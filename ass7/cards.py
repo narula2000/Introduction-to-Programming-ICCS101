@@ -1,13 +1,14 @@
 # Assignment 07, Task 02
 # Name: Vikrom Narula
-#Collaborations: 1409
+# Collaborations: 1409
 # Time Spent: 8 hrs
 
 
 def is_straight_flush(h):  # Five cards in a sequence, all in the same suit.
     suit = dict()
-    rank = ['A', '2', '3', '4', '5', '6', '7',
-            '8', '9', '10', 'J', 'K', 'Q', 'A']
+    rank = [
+        'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'
+    ]
     lst_rank = []
     count = 0
     for i in h:
@@ -24,7 +25,7 @@ def is_straight_flush(h):  # Five cards in a sequence, all in the same suit.
                     if sorted(lst_rank) == ['10', 'A', 'J', 'K', 'Q']:
                         return True
                     else:
-                        for v in rank[c:c+5]:
+                        for v in rank[c:c + 5]:
                             for l in lst_rank:
                                 if v == l:
                                     count += 1
@@ -107,12 +108,12 @@ def all_hand():
     s_hand = []
     for i1 in range(len(deck)):
         if i1 < 48:
-            for i2 in range(i1+1, len(deck)):
-                for i3 in range(i2+1, len(deck)):
-                    for i4 in range(i3+1, len(deck)):
-                        for i5 in range(i4+1, len(deck)):
-                            s_hand.append(
-                                (deck[i1], deck[i2], deck[i3], deck[i4], deck[i5]))
+            for i2 in range(i1 + 1, len(deck)):
+                for i3 in range(i2 + 1, len(deck)):
+                    for i4 in range(i3 + 1, len(deck)):
+                        for i5 in range(i4 + 1, len(deck)):
+                            s_hand.append((deck[i1], deck[i2], deck[i3],
+                                           deck[i4], deck[i5]))
     return set(s_hand)
 
 
