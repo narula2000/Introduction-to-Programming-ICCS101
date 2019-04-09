@@ -2,6 +2,7 @@
 # Name: Vikrom Narula
 # Time spent: 1:00 hour
 
+
 def readAloud(lst):
     """
     >>> readAloud([])

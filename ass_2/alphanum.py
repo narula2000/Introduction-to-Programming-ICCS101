@@ -3,14 +3,16 @@
 # Collaborators: Aj. Sunsern, Sukhcott Pruthi, Yves Ramon Hager
 # TimeSpent: 1:30 hrs
 
-a='2'
-b='3'
-c='4'
-d='5'
-e='6'
-f='7'
-g='8'
-h='9'
+a = '2'
+b = '3'
+c = '4'
+d = '5'
+e = '6'
+f = '7'
+g = '8'
+h = '9'
+
+
 def sev(word):
     if word[6]in'ABCabc':
         return a
@@ -28,7 +30,8 @@ def sev(word):
         return g
     if word[6]in 'WXYZwxyz':
         return h
-    
+
+
 def six(word):
     if word[5]in'ABCabc':
         return a
@@ -46,6 +49,8 @@ def six(word):
         return g
     if word[5]in 'WXYZwxyz':
         return h
+
+
 def five(word):
     if word[4]in'ABCabc':
         return a
@@ -64,6 +69,7 @@ def five(word):
     if word[4]in 'WXYZwxyz':
         return h
 
+
 def four(word):
     if word[3]in'ABCabc':
         return a
@@ -81,6 +87,8 @@ def four(word):
         return g
     if word[3]in 'WXYZwxyz':
         return h
+
+
 def thir(word):
     if word[2]in'ABCabc':
         return a
@@ -98,6 +106,8 @@ def thir(word):
         return g
     if word[2]in 'WXYZwxyz':
         return h
+
+
 def se(word):
     if word[1]in'ABCabc':
         return a
@@ -115,6 +125,8 @@ def se(word):
         return g
     if word[1]in 'WXYZwxyz':
         return h
+
+
 def fi(word):
     if word[0]in'ABCabc':
         return a
@@ -134,8 +146,6 @@ def fi(word):
         return h
 
 
-
-
 def phoneWord2Num(word):
     """
     >>> phoneWord2Num("PrOGrAM")
@@ -148,14 +158,6 @@ def phoneWord2Num(word):
     2288379
     """
     return int(fi(word)+se(word)+thir(word)+four(word)+five(word)+six(word)+sev(word))
-          
-        
-      
-    
-    
-    
-     
-    
 
 
 ###########################################################################

@@ -1,6 +1,5 @@
 # Assignment 05, Task 01
 # Name: Vikrom Narula
-
 # Time Spent: 1 hrs
 
 
@@ -14,7 +13,6 @@ def charHistogram(filename):
         for s in range(0, len(w_n)):
             for h in w[s]:
                 l = h.lower()
-
                 if l in table:
                     table[l] += 1
                 else:
