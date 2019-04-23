@@ -37,8 +37,6 @@ def altSum(lst):
         if len(lst) == x+1:
             return acc
 
-
-
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
 # your code. Run me (e.g., using the run button in Spyder).
