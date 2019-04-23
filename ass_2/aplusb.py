@@ -20,7 +20,6 @@ def a_plus_abs_b(a, b):
         return f
     return f(a,b)
 
-    
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
 # your code. Run me (e.g., using the run button in Spyder).
