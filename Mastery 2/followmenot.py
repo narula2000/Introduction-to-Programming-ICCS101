@@ -15,19 +15,3 @@ class User:
             return True
         else:
             return False
-
-
-#
-#userA = User()
-#userB = User()
-#userC = User()
-# userA.followedBy(userB)
-# userA.followedBy(userA)
-# userC.followedBy(userB)
-# assert(userA.isFollowedBy(userB)==True)
-# assert(userC.isFollowedBy(userB)==True)
-# assert(userC.isFollowedBy(userA)==False)
-# userA.unfollowedBy(userB)
-# assert(userA.isFollowedBy(userB)==False)
-#
-#
