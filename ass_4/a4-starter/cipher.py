@@ -3,6 +3,7 @@
 # Time spent: 68:00 hour
 
 class str2(str):
+
     def __repr__(self):
         return ''.join(('"', super().__repr__()[1:-1], '"'))
 
