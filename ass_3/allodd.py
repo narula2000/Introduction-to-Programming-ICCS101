@@ -26,7 +26,6 @@ def is_all_odd(lst):
         return False
 
 
-
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
 # your code. Run me (e.g., using the run button in Spyder).

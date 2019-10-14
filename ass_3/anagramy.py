@@ -7,8 +7,8 @@ def Anagramy(w1, w2):
             if j == w:
                 c += 1
                 break
-    if c == len(w1):
-        return True
+    if c == len(w1)
+    return True
 
 
 print(Anagramy("agree", "eager"), Anagramy("angel", "glean"))

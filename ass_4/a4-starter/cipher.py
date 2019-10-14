@@ -2,6 +2,7 @@
 # Name: Vikrom Narula
 # Time spent: 68:00 hour
 
+
 class str2(str):
 
     def __repr__(self):

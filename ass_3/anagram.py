@@ -15,5 +15,5 @@ def isAnagram(word1, word2):
 ###########################################################################
 if __name__ == "__main__":
     import doctest
-    doctest.testmod(VERBOSE=True)
+    doctest.testmod(verbose=True)
 ###########################################################################
