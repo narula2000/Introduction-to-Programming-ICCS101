@@ -62,9 +62,9 @@ def kThHappy(k):
     c = 1
     h = 1
     while h-1 != k:
-        while isHappy(c) != True:
+        while isHappy(c) is not True:
             c = c+1
-        while isHappy(c) == True:
+        while isHappy(c):
             h = h+1
             c = c+1
         if h-1 == k:
