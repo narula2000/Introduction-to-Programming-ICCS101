@@ -2,10 +2,15 @@
 # Name: Vikrom Narula
 # Time spent: 1:00 hour
 
-m=int(15485867**(17942+4691))+(179424691**(1548+5867))
-i=str(m)
-x=input("Enter your student ID:")
-k=int(x[-3]+x[-2]+x[-1])
-a=k-1
-b=-k
-print(i[b]+i[a])
+
+input = input("Enter your student ID:")
+
+
+def decipher(input):
+    cipher = 15485867**(22633) + 179424691**(7415)
+    cipherString = str(cipher)
+    idx = int(input[-3:])
+    print(cipherString[-idx]+cipherString[idx-1])
+
+
+decipher(input)

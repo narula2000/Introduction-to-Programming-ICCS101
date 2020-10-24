@@ -13,7 +13,7 @@ g = '8'
 h = '9'
 
 
-def sev(word):
+def seventh(word):
     if word[6]in'ABCabc':
         return a
     if word[6]in'DEFdef':
@@ -32,7 +32,7 @@ def sev(word):
         return h
 
 
-def six(word):
+def sixth(word):
     if word[5]in'ABCabc':
         return a
     if word[5]in'DEFdef':
@@ -51,7 +51,7 @@ def six(word):
         return h
 
 
-def five(word):
+def fifth(word):
     if word[4]in'ABCabc':
         return a
     if word[4]in'DEFdef':
@@ -70,7 +70,7 @@ def five(word):
         return h
 
 
-def four(word):
+def fourth(word):
     if word[3]in'ABCabc':
         return a
     if word[3]in'DEFdef':
@@ -89,7 +89,7 @@ def four(word):
         return h
 
 
-def thir(word):
+def thrid(word):
     if word[2]in'ABCabc':
         return a
     if word[2]in'DEFdef':
@@ -108,7 +108,7 @@ def thir(word):
         return h
 
 
-def se(word):
+def second(word):
     if word[1]in'ABCabc':
         return a
     if word[1]in'DEFdef':
@@ -127,7 +127,7 @@ def se(word):
         return h
 
 
-def fi(word):
+def first(word):
     if word[0]in'ABCabc':
         return a
     if word[0]in'DEFdef':
@@ -157,7 +157,7 @@ def phoneWord2Num(word):
     >>> phoneWord2Num("Battery")
     2288379
     """
-    return int(fi(word)+se(word)+thir(word)+four(word)+five(word)+six(word)+sev(word))
+    return int(first(word)+second(word)+thrid(word)+fourth(word)+fifth(word)+sixth(word)+seventh(word))
 
 
 ###########################################################################

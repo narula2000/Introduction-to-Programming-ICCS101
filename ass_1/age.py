@@ -1,9 +1,8 @@
 # Assigment 01 Task 02
-# Name: VIkrom Narula
+# Name: Vikrom Narula
 # Time spent: 8:00 min
 
-a = input("Enter your name:")
-print(a)
-print("Hi," + a)
-b = input("Enter your year of birth:")
-print("Your age is " + str(2018 - int(b)))
+name = input("Enter your name:")
+print("Hi," + name)
+yearOfBirth = input("Enter your year of birth:")
+print("Your age is " + str(2020 - int(yearOfBirth)))
