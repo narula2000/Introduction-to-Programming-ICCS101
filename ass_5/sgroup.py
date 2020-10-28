@@ -1,71 +1,36 @@
-#Assignment 05, Task 05 
-#Name: Vikrom Narula
+# Assignment 05, Task 05
+# Name: Vikrom Narula
+# Time Spent: 24 hrs
 
-#Time Spent: 24 hrs
+
+def findMaxGapOfList(data):
+    max = 0
+    idx = 0
+    for i in range(len(data) - 1):
+        gap = data[i + 1] - data[i]
+        if gap > max:
+            max = gap
+            idx = i
+    return (idx, max)
 
 
-def findmax(data):
-    lst=[0]
-    b=0
-    
-    for x in range(len(data)-1):
-        a=data[x+1]-data[x]
-        if a>b:
-            b=a
-            lst[0]=x
-    return lst[0]
-def maxxy(data):
-    lst=[0]
-    b=0
-    
-    for x in range(len(data)-1):
-        a=data[x+1]-data[x]
-        if a>b:
-            b=a
-            lst[0]=b
-    return lst[0]
-def checklstm(data):
-    d=[]
-    for y in data:
-        if y not in d:
-            d.append(y)
-            d.append(findmax(y))
-            d.append(maxxy(y))
-    return d
+def findMaxGapList(data):
+    max = 0
+    maxGapLst = []
+    for lst in data:
+        if findMaxGapOfList(lst)[1] > max:
+            max = findMaxGapOfList(lst)[1]
+            maxGapLst = lst
+    return maxGapLst
+
+
 def separate(data, k):
-    l=[]
-    g=data[:]
-    el=[]
-    el.append(g)
-    vl=[3]
-    b=0
-    while k!=len(l):
-        for ma in el:
-            if maxxy(ma)>b:
-                b=maxxy(ma)
-                vl[0]=ma
-                
-        b=0
-        ll=el
-        for ch in ll:
-            if ch==vl[0]:
-                el.remove(vl[0])
-                inx=findmax(vl[0])+1
-                el.append(vl[0][:inx])
-                el.append(vl[0][inx:])
+    data = [data[:]]
+    while k != len(data):
+        maxGapList = findMaxGapList(data)
+        data.remove(maxGapList)
+        split = findMaxGapOfList(maxGapList)[0] + 1
+        data.append(maxGapList[:split])
+        data.append(maxGapList[split:])
 
-        if len(el)==k:
-            for u in el:
-                l.append(u)
-    return sorted(l)
-
-
-
-
-
-
-
-
-
-
-
+    return sorted(data)
