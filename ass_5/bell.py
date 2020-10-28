@@ -2,19 +2,14 @@
 # Name: Vikrom Narula
 # Time Spent: 1 hrs
 
-
 def loveTri(n):
-    lst = []
-    e_lst = []
-    l_lst = []
-    for x in range(n):
-        if x == 0:
-            lst.append(1)
-            l_lst.append(lst)
-        if x > 0:
-            e_lst = [lst[-1]]
-            for y in range(len(lst)):
-                e_lst.append(lst[y]+e_lst[y])
-            lst = e_lst
-            l_lst.append(e_lst)
-    return l_lst
+    old = [1]
+    buffer = []
+    answer = [old]
+    for i in range(n - 1):
+        buffer = [old[-1]]
+        for j in range(len(old)):
+            buffer.append(old[j] + buffer[j])
+        answer.append(buffer)
+        old = buffer
+    return answer

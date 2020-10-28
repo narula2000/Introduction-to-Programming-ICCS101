@@ -2,7 +2,7 @@
 # Name: Vikrom Narula
 # Collaborators: None
 # TimeSpent: 10:50min
-def powerLoop(upto):
+def powerLoop(upTo):
     """
 
     >>> powerLoop(0)
@@ -14,8 +14,8 @@ def powerLoop(upto):
     3 18
     4 97
     """
-    for x in range(upto+1):
-        print(x,((11**x)%101))
+    for x in range(upTo + 1):
+        print(x, ((11 ** x) % 101))
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

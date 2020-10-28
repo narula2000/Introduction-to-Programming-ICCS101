@@ -16,16 +16,16 @@ def pos_neg(a, b, negative):
     >>> pos_neg(-4, -5, True)
     True
     """
-    
-    if a>0 and b<0 and negative == 0:
+
+    if a > 0 and b < 0 and not negative:
         return True
-    if a<0 and b>0 and negative == 0:
+    if a < 0 and b > 0 and not negative:
         return True
-    if a<0 and b<0 and negative == 1:
-        return True 
+    if a < 0 and b < 0 and negative:
+        return True
     else:
         return False
-    
+
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for
 # your code. Run me (e.g., using the run button in Spyder).

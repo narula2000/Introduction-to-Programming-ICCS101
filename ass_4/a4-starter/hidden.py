@@ -2,7 +2,7 @@
 # Name: Vikrom Narula
 # Time spent: 48:00 hour
 
-def is_hidden(s, t):
+def is_hidden(string, hidden):
     """
     >>> is_hidden("welcometothehotelcalifornia","melon")
     True
@@ -20,20 +20,17 @@ def is_hidden(s, t):
     True
     """
 
-    y=0
-    for x in range(0,len(s)-1):
-        if t[y]==s[x] and y<len(t)-1:
-            y=y+1
-    if y==len(t)-1:
-    y = 0
-    for x in range(0, len(s) - 1):
-        if t[y] == s[x] and y < len(t) - 1:
-            y = y + 1
-    if y == len(t) - 1:
-        return True
-    else:
-        return False
+    iter = 0
+    for i in range(len(string) - 1):
+        if hidden[iter] == string[i] and iter < len(hidden) - 1:
+            iter += 1
+    if iter == len(hidden) - 1:
+        iter = 0
+    for i in range(len(string) - 1):
+        if hidden[iter] == string[i] and iter < len(hidden) - 1:
+            iter += 1
 
+    return iter == len(hidden) - 1
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

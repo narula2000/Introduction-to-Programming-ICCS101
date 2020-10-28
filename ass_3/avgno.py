@@ -13,12 +13,7 @@ def robust_avg(lst):
 
     lst.remove(max(lst))
     lst.remove(min(lst))
-    summ = 0
-    for y in lst:
-        summ = summ+y
-
-    n = (1/len(lst))*(summ)
-    return n
+    return sum(lst) * 1.0 / (len(lst))
 
 
 ###########################################################################

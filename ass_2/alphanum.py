@@ -14,135 +14,135 @@ h = '9'
 
 
 def seventh(word):
-    if word[6]in'ABCabc':
+    if word[6] in 'ABCabc':
         return a
-    if word[6]in'DEFdef':
+    if word[6] in 'DEFdef':
         return b
-    if word[6]in 'GHIghi':
+    if word[6] in 'GHIghi':
         return c
-    if word[6]in 'JKLjkl':
+    if word[6] in 'JKLjkl':
         return d
-    if word[6]in 'MNOmno':
+    if word[6] in 'MNOmno':
         return e
-    if word[6]in 'PQRSpqrs':
+    if word[6] in 'PQRSpqrs':
         return f
-    if word[6]in 'TUVtuv':
+    if word[6] in 'TUVtuv':
         return g
-    if word[6]in 'WXYZwxyz':
+    if word[6] in 'WXYZwxyz':
         return h
 
 
 def sixth(word):
-    if word[5]in'ABCabc':
+    if word[5] in 'ABCabc':
         return a
-    if word[5]in'DEFdef':
+    if word[5] in 'DEFdef':
         return b
-    if word[5]in 'GHIghi':
+    if word[5] in 'GHIghi':
         return c
-    if word[5]in 'JKLjkl':
+    if word[5] in 'JKLjkl':
         return d
-    if word[5]in 'MNOmno':
+    if word[5] in 'MNOmno':
         return e
-    if word[5]in 'PQRSpqrs':
+    if word[5] in 'PQRSpqrs':
         return f
-    if word[5]in 'TUVtuv':
+    if word[5] in 'TUVtuv':
         return g
-    if word[5]in 'WXYZwxyz':
+    if word[5] in 'WXYZwxyz':
         return h
 
 
 def fifth(word):
-    if word[4]in'ABCabc':
+    if word[4] in 'ABCabc':
         return a
-    if word[4]in'DEFdef':
+    if word[4] in 'DEFdef':
         return b
-    if word[4]in 'GHIghi':
+    if word[4] in 'GHIghi':
         return c
-    if word[4]in 'JKLjkl':
+    if word[4] in 'JKLjkl':
         return d
-    if word[4]in 'MNOmno':
+    if word[4] in 'MNOmno':
         return e
-    if word[4]in 'PQRSpqrs':
+    if word[4] in 'PQRSpqrs':
         return f
-    if word[4]in 'TUVtuv':
+    if word[4] in 'TUVtuv':
         return g
-    if word[4]in 'WXYZwxyz':
+    if word[4] in 'WXYZwxyz':
         return h
 
 
 def fourth(word):
-    if word[3]in'ABCabc':
+    if word[3] in 'ABCabc':
         return a
-    if word[3]in'DEFdef':
+    if word[3] in 'DEFdef':
         return b
-    if word[3]in 'GHIghi':
+    if word[3] in 'GHIghi':
         return c
-    if word[3]in 'JKLjkl':
+    if word[3] in 'JKLjkl':
         return d
-    if word[3]in 'MNOmno':
+    if word[3] in 'MNOmno':
         return e
-    if word[3]in 'PQRSpqrs':
+    if word[3] in 'PQRSpqrs':
         return f
-    if word[3]in 'TUVtuv':
+    if word[3] in 'TUVtuv':
         return g
-    if word[3]in 'WXYZwxyz':
+    if word[3] in 'WXYZwxyz':
         return h
 
 
-def thrid(word):
-    if word[2]in'ABCabc':
+def third(word):
+    if word[2] in 'ABCabc':
         return a
-    if word[2]in'DEFdef':
+    if word[2] in 'DEFdef':
         return b
-    if word[2]in 'GHIghi':
+    if word[2] in 'GHIghi':
         return c
-    if word[2]in 'JKLjkl':
+    if word[2] in 'JKLjkl':
         return d
-    if word[2]in 'MNOmno':
+    if word[2] in 'MNOmno':
         return e
-    if word[2]in 'PQRSpqrs':
+    if word[2] in 'PQRSpqrs':
         return f
-    if word[2]in 'TUVtuv':
+    if word[2] in 'TUVtuv':
         return g
-    if word[2]in 'WXYZwxyz':
+    if word[2] in 'WXYZwxyz':
         return h
 
 
 def second(word):
-    if word[1]in'ABCabc':
+    if word[1] in 'ABCabc':
         return a
-    if word[1]in'DEFdef':
+    if word[1] in 'DEFdef':
         return b
-    if word[1]in 'GHIghi':
+    if word[1] in 'GHIghi':
         return c
-    if word[1]in 'JKLjkl':
+    if word[1] in 'JKLjkl':
         return d
-    if word[1]in 'MNOmno':
+    if word[1] in 'MNOmno':
         return e
-    if word[1]in 'PQRSpqrs':
+    if word[1] in 'PQRSpqrs':
         return f
-    if word[1]in 'TUVtuv':
+    if word[1] in 'TUVtuv':
         return g
-    if word[1]in 'WXYZwxyz':
+    if word[1] in 'WXYZwxyz':
         return h
 
 
 def first(word):
-    if word[0]in'ABCabc':
+    if word[0] in 'ABCabc':
         return a
-    if word[0]in'DEFdef':
+    if word[0] in 'DEFdef':
         return b
-    if word[0]in 'GHIghi':
+    if word[0] in 'GHIghi':
         return c
-    if word[0]in 'JKLjkl':
+    if word[0] in 'JKLjkl':
         return d
-    if word[0]in 'MNOmno':
+    if word[0] in 'MNOmno':
         return e
-    if word[0]in 'PQRSpqrs':
+    if word[0] in 'PQRSpqrs':
         return f
-    if word[0]in 'TUVtuv':
+    if word[0] in 'TUVtuv':
         return g
-    if word[0]in 'WXYZwxyz':
+    if word[0] in 'WXYZwxyz':
         return h
 
 
@@ -157,7 +157,7 @@ def phoneWord2Num(word):
     >>> phoneWord2Num("Battery")
     2288379
     """
-    return int(first(word)+second(word)+thrid(word)+fourth(word)+fifth(word)+sixth(word)+seventh(word))
+    return int(first(word)+second(word)+third(word)+fourth(word)+fifth(word)+sixth(word)+seventh(word))
 
 
 ###########################################################################

@@ -12,15 +12,14 @@ def price(vol):
     3298.0
     """
 
-    # delete this comment line and write your code
-    if vol< 10 :
-        ship = 20*vol
-    if vol >9 and vol<101:
-        ship= 500
-    if vol>100:
-        ship= -((vol*17)*0.03)
-    cost = vol*17 + ship
-    return float(cost)
+    if vol < 10:
+        ship = 20 * vol
+    elif vol >= 10 and vol <= 100:
+        ship = 500
+    elif vol > 100:
+        ship = (vol * 17) * -0.03
+    cost = vol * 17.0 + ship
+    return cost
 
 
 ###########################################################################

@@ -24,7 +24,7 @@ def my_mean(p, q, r):
     >>> round(my_mean(3,7,4),5)
     4.66667
     """
-    return (p+q+r)/3
+    return (p+q+r) / 3
 
 
 def my_med(p, q, r):
@@ -34,14 +34,12 @@ def my_med(p, q, r):
     12
     """
 
-    # delete this comment line and add your code
     if (p > q and p < r) or (p < q and p > r):
         return p
     if (q > p and q < r) or (q < p and q > r):
         return q
     else:
         return r
-
 
 
 ###########################################################################

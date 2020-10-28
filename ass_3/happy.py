@@ -15,12 +15,10 @@ def sumOfDigitsSquared(n):
     >>> sumOfDigitsSquared(199)
     163
     """
-    k = 0
-    m = str(n)
-
-    for x in range(0, len(m)):
-        k = (int(m[-x])**2)+k
-    return k
+    acc = 0
+    for unit in str(n):
+        acc += (int(unit) ** 2)
+    return acc
 
 
 def isHappy(n):
@@ -35,16 +33,9 @@ def isHappy(n):
     >>> isHappy(989)
     True
     """
-    r = n
-    while r != 1 or r != 4:
-        r = sumOfDigitsSquared(r)
-        if r == 1 or r == 4:
-            break
-
-    if r == 4:
-        return False
-    if r == 1:
-        return True
+    while n != 1 and n != 4:
+        n = sumOfDigitsSquared(n)
+    return n == 1
 
 
 def kThHappy(k):
@@ -59,16 +50,16 @@ def kThHappy(k):
     >>> kThHappy(19)
     97
     """
-    c = 1
-    h = 1
-    while h-1 != k:
-        while isHappy(c) is not True:
-            c = c+1
-        while isHappy(c):
-            h = h+1
-            c = c+1
-        if h-1 == k:
-            return c-1
+    counter = 1
+    happyNumber = 1
+    while happyNumber - 1 != k:
+        while isHappy(counter) is not True:
+            counter += 1
+        while isHappy(counter):
+            happyNumber += 1
+            counter += 1
+        if happyNumber - 1 == k:
+            return counter - 1
 
 
 ###########################################################################

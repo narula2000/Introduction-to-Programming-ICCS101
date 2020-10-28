@@ -17,26 +17,18 @@ def jogging_average(activities):
     >>> round(jogging_average(log_book), 4)
     2.4587
     """
-    n_sec = 0
-    n_dis = 0
-    #    for x in activities:
-    #        if "jogging;" in x:
-    #            sec=int(x[13:15])*60+int(x[16:18])
-    #            dis=float(x[28:])*1000
-    #            n_sec=n_sec+sec
-    #            n_dis=n_dis+dis
-    #    return n_dis/n_sec
-    for x in activities:
-        a, b, c = x.split(";")
-        if a == "jogging":
-            g, h = b.split(":")  # time
-            j, k = h.split(",")
-            sec = (int(j) * 60) + int(k)
-            u, i = c.split(":")
-            dis = float(i) * 1000
-            n_dis = n_dis + dis
-            n_sec = n_sec + sec
-    speed = n_dis / n_sec
+    finalTime = 0
+    finalDistance = 0
+    for log in activities:
+        activity, time, distance = log.split(";")
+        if activity == "jogging":
+            timeSpent = time.split(":")[1]  # time
+            hour, seconds = timeSpent.split(",")
+            seconds = (int(hour) * 60) + int(seconds)
+            distance = float(distance.split(":")[1]) * 1000
+            finalDistance += distance
+            finalTime += seconds
+    speed = finalDistance / finalTime
     return speed
 
 

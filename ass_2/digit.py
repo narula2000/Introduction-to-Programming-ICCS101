@@ -20,26 +20,26 @@ def kthDigit(x, b, k):
     >>> kthDigit(987, 16, 2)
     3
     """
-    a=str(x) 
-    c="31311"
-    
-    if b==10:
-        if k==0:
+    a = str(x)
+    c = "31311"
+
+    if b == 10:
+        if k == 0:
             return int(a[-1])
-        if k==1:
+        elif k == 1:
             return int(a[-2])
-        if k==2:
+        elif k == 2:
             return int(a[-3])
-        if k==3:
+        elif k == 3:
             return 0
-    if b==16:
-        if k==0:
+    if b == 16:
+        if k == 0:
             return int(c[-2:])
-        if k==1:
+        elif k == 1:
             return int(c[1:3])
-        if k==2:
+        elif k == 2:
             return int(c[0])
-        
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

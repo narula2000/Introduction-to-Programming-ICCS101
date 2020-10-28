@@ -2,36 +2,14 @@
 # Name: Vikrom Narula
 # Time spent: 5:00 min
 
-
-def checkprime(n):
-    if n < 2:
-        return False
-    else:
-        divisible = False
-        for d in range(2, n):
-            if n % d == 0:
-                divisible = True
-                break
-        # prime if none of these divide x
-        return not divisible
-
-
-def plus_unit(a):
-    acc = 0
-    s = str(a)
-    for b in range(1, len(s)+1):
-        acc = acc+int(s[-b])
-    return acc
-
-
 def primeMeatExtract(x):
     """
 
-    >>> primeMeatExtract(1) 
+    >>> primeMeatExtract(1)
     True
     >>> primeMeatExtract(3)
     3
-    >>> primeMeatExtract(4) 
+    >>> primeMeatExtract(4)
     True
     >>> primeMeatExtract(11)
     11
@@ -43,25 +21,31 @@ def primeMeatExtract(x):
     True
 
     """
-    if x <= 1:
-        return True
-    if x <= 9 and x > 1:
-        if checkprime(x) == True:
-            return x
+
+    def checkprime(number):
+        if number <= 1:
+            return False
         else:
+            for i in range(2, number):
+                if number % i == 0:
+                    return False
             return True
 
-    while checkprime(x) != True and x > 9:
+
+    def plus_unit(number):
+        acc = 0
+        for unit in str(number):
+            acc += int(unit)
+        return acc
+
+
+    while x > 9 and not checkprime(x):
         x = plus_unit(x)
-    if x <= 9 and x > 1:
-        if checkprime(x) == True:
-            return x
-        else:
-            return True
-    if checkprime(x) == True:
+
+    if checkprime(x):
         return x
-
-
+    else:
+        return True
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

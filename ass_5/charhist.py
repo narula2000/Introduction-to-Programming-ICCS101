@@ -7,22 +7,17 @@ def charHistogram(filename):
     text = open(filename, 'r')
     line = text.readlines()
     table = dict()
-    alp = 'abcdefghijklmnopqrstuvwxyz'
-    for w in line:
-        w_n = w.strip()
-        for s in range(0, len(w_n)):
-            for h in w[s]:
-                l = h.lower()
-                if l in table:
-                    table[l] += 1
-                else:
-                    table[l] = 1
-#    for let in table.keys():
-#        for al in range(0,len(alp)):
-#            if let==alp[al]:
-#                print(let, (table[let]*'+'))
-    for al in range(0, len(alp)):
-        for let in table.keys():
-            if alp[al] == let:
-                print(let, (table[let]*'+'))
+    alphabets = 'abcdefghijklmnopqrstuvwxyz'
+    for words in line:
+        word = words.strip()
+        for char in word:
+            lowerChar = char.lower()
+            if lowerChar in table:
+                table[lowerChar] += 1
+            else:
+                table[lowerChar] = 1
+    for char in alphabets:
+        for key in table.keys():
+            if char == key:
+                print(key, (table[key] * '+'))
     text.close()

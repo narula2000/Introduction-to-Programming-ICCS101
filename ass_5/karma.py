@@ -5,30 +5,31 @@
 
 def keepTabs(actions):
     table = dict()
-    r_table = dict()
+    answer = dict()
     for names in actions:
         if '+' in names:
-            a, v = names.split('++')
-            if a in table:
-                table[a] += 1
+            name = names.split('++')[0]
+            if name in table:
+                table[name] += 1
             else:
-                table[a] = 1
+                table[name] = 1
         if '--' in names:
-            a, v = names.split('--')
-            if a in table:
-                table[a] -= 1
+            name = names.split('--')[0]
+            if name in table:
+                table[name] -= 1
             else:
-                table[a] = -1
+                table[name] = -1
         if '->' in names:
-            a, v = names.split('->')
-            if a in table and v in table:
-                table[v] += table[a]
-                table[a] = 0
-            elif a in table and v not in table:
-                table[v] = table[a]
-                table[a] = 0
+            giver, taker = names.split('->')
+            if giver in table and taker in table:
+                table[taker] += table[giver]
+                table[giver] = 0
+            elif giver in table and taker not in table:
+                table[taker] = table[giver]
+                table[giver] = 0
+
     for key in table:
         if table[key] != 0:
-            r_table[key] = table[key]
+            answer[key] = table[key]
 
-    return r_table
+    return answer

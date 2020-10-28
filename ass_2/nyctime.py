@@ -18,14 +18,13 @@ def nycHour(londonHour):
     '12am'
     """
 
-    # delete this comment line, and write your code.
     if londonHour > 5 and londonHour < 17:
-        return str(londonHour-5)+"am"
-    if londonHour < 5:
-        return str(londonHour+7)+"pm"
-    if londonHour > 17:
-        return str(londonHour-17)+"pm"
-    if londonHour == 5:
+        return str(londonHour - 5) + "am"
+    elif londonHour < 5:
+        return str(londonHour + 7) + "pm"
+    elif londonHour > 17:
+        return str(londonHour - 17) + "pm"
+    elif londonHour == 5:
         return "12am"
     else:
         return "12pm"

@@ -15,19 +15,6 @@ def triangle(k):
     *****
 
     """
-    #    def star():
-    #        for a in range(1,k):
-    #            print("*"*a)
-    #
-    #    def pound():
-    #        for b in range(k-1,-1,-1):
-    #            print("#"*b)
-    #    return pound()+star()+pound()
-    #    for a in range(1,k):
-    #        x=("*"*a)
-    #    for b in range(k-1,-1,-1):
-    #        y=("#"*b)
-    #    print(y+x+y)
     for x in range(1, k + 1):
         print("#" * (k - x) + "*" * (2 * x - 1) + "#" * (k - x))
 

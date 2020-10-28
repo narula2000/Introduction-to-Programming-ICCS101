@@ -16,23 +16,20 @@ def readAloud(lst):
     >>> readAloud([3,3,1,1,3,1,1])
     [2, 3, 2, 1, 1, 3, 2, 1]
     """
-    cun = 1
-    n_lst = []
+    counter = 1
+    answer = []
     if not lst:
         return []
-    for x in range(0, len(lst)):
-        if len(lst) != x + 1:
-            if lst[x] == lst[x + 1]:
-                cun = cun + 1
-
-            if lst[x] != lst[x + 1]:
-                n_lst.append(cun)
-                n_lst.append(lst[x])
-                cun = 1
-        if len(lst) == x + 1:
-            n_lst.append(cun)
-            n_lst.append(lst[x])
-            return n_lst
+    for i in range(len(lst) - 1):
+        if lst[i] == lst[i + 1]:
+            counter += 1
+        else:
+            answer.append(counter)
+            answer.append(lst[i])
+            counter = 1
+    answer.append(counter)
+    answer.append(lst[-1])
+    return answer
 
 
 ###########################################################################

@@ -4,7 +4,16 @@ def isAnagram(word1, word2):
     >>> isAnagram("iceman","cinema")
     True
     """
-    print()
+    if len(word1) != len(word2):
+        return False
+    counter = 0
+    for i in word1:
+        for j in word2:
+            if j == i:
+                counter += 1
+                break
+
+    return counter == len(word1)
 
 
 ###########################################################################

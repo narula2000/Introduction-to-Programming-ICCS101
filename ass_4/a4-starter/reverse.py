@@ -1,7 +1,7 @@
-#Assigment 04, Task 01
-#Name: Vikrom Narula
-#Time spent: 30:00 min
-def rev_str(s):
+# Assigment 04, Task 01
+# Name: Vikrom Narula
+# Time spent: 30:00 min
+def rev_str(string):
     """Returns the reverse of the input string s, without using the built-in
     reverse mechanism.
 
@@ -14,15 +14,11 @@ def rev_str(s):
     >>> rev_str("y")
     'y'
     """
-    b=""
-    for x in range(1,len(s)+1):
-        if len(s)!=len(b):
-            y=s[-x]
-            b=b+y
-        
-        if len(s)==len(b):
-            return b
-        
+    buffer = ""
+    for char in string:
+        buffer = char + buffer
+    return buffer
+
 
 ###########################################################################
 # Please don't mind me living down here. I provide some initial testing for

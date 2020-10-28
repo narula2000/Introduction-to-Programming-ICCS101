@@ -12,12 +12,10 @@ def a_plus_abs_b(a, b):
     >>> a_plus_abs_b(2, -3)
     5
     """
-    if b<0:
-        f = sub(a, b)
-        return f
+    if b < 0:
+        f = sub
     else:
-        f = add(a, b)
-        return f
+        f = add
     return f(a,b)
 
 ###########################################################################
