@@ -5,7 +5,6 @@
 
 def keepTabs(actions):
     table = dict()
-    answer = dict()
     for names in actions:
         if '+' in names:
             name = names.split('++')[0]
@@ -28,8 +27,4 @@ def keepTabs(actions):
                 table[taker] = table[giver]
                 table[giver] = 0
 
-    for key in table:
-        if table[key] != 0:
-            answer[key] = table[key]
-
-    return answer
+    return {key: value for key, value in table.items() if value != 0}
